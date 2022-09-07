@@ -1,4 +1,4 @@
-#define NUM_OF_READINGS		50
+#define NUM_OF_READINGS			50
 #define TEMP_MIN			0
 #define TEMP_MAX			45
 #define SOC_MIN				20
@@ -15,5 +15,5 @@ typedef enum{
 }status_en;
 
 void generateSenderData(tst_BatteryParameters *ptr_BatteryParam);
-status_en displaySenderData(tst_BatteryParameters BatteryParam);
+void displaySenderData(status_en *ptr_operationStatus_en, tst_BatteryParameters BatteryParam);
 status_en sendBatteryParameters(void);
