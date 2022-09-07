@@ -10,25 +10,21 @@ void generateSenderData(tst_BatteryParameters *ptr_BatteryParam){
 	}
 }
 
-status_en displaySenderData(tst_BatteryParameters BatteryParam){
-	status_en returnStatus_en = FAILURE;
+void displaySenderData(status_en *ptr_operationStatus_en, tst_BatteryParameters BatteryParam){
+	*ptr_operationStatus_en = FAILURE;
 	int index = 0;
-	//Print battery parameters data to console
+	//Print BaterryParameters data to console
 	for(index = 0; index < NUM_OF_READINGS; index++){
 		printf("\nTemperature: %.f, SOC: %.f",BatteryParam.temperature[index],BatteryParam.soc[index]);
 	}
-	//Update Return status
-	if (index == NUM_OF_READINGS){
-		returnStatus_en = SUCCESS;
-	}
-	return returnStatus_en;
+	*ptr_operationStatus_en = SUCCESS;
 }
 
 status_en sendBatteryParameters(void){
 	tst_BatteryParameters BatteryParam;
-	status_en returnStatus_en = FAILURE;
+	status_en operationStatus_en = FAILURE;
 	//Generate data for Battery parameters and print to console
 	generateSenderData(&BatteryParam);
-	returnStatus_en = displaySenderData(BatteryParam);
-	return returnStatus_en;
+	displaySenderData(&operationStatus_en, BatteryParam);
+	return operationStatus_en;
 }
