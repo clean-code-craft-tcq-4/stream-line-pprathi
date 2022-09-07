@@ -15,7 +15,7 @@ void testfunctions(){
 	assert(BatteryParam.soc[15] >= SOC_MIN);
 
 	//Test the Display interface
-	retStatus = displaySenderData(BatteryParam);
+	displaySenderData(&retStatus, BatteryParam);
 	assert( retStatus == SUCCESS);
 
 	retStatus = sendBatteryParameters();
@@ -26,4 +26,3 @@ int main(void) {
 	sendBatteryParameters();
 	testfunctions();
 }
-
