@@ -23,6 +23,7 @@ void testfunctions(){
 }
 
 int main(void) {
-	sendBatteryParameters();
-	testfunctions();
+	//sendBatteryParameters();
+	//testfunctions();
+	 readData();
 }
