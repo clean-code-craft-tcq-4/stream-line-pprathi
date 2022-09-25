@@ -1,6 +1,16 @@
 #include "Receiver.h"
 #include <stdio.h>
 
+int readsensorvalue[5];
+int readsensorvalue1[5];
+int arrNumbers[5] = {0};
+int pos = 0;
+int newAvg = 0;
+int newAvg1 = 0;
+long sum = 0;
+int len = sizeof(arrNumbers) / sizeof(int);
+int count = sizeof(readsensorvalue) / sizeof(int);
+
 void readSensorData(int min,int max,int *readsensorvalue,int *readsensorvalue1)
 {
     printf("**************Read Sensor Data**************\n");
