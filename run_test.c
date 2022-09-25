@@ -26,5 +26,6 @@ void testfunctions(){
 int main(void) {
 	//sendBatteryParameters();
 	//testfunctions();
-	 readData();
+	 readSensorData(0,5,sampleValue,sampleValue1);
+         newAvgCalculate(sampleValue,sampleValue1);
 }
