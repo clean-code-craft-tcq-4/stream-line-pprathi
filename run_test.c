@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <assert.h>
 #include "Sender.h"
-#include "Receiver.h"
 
 void testfunctions(){
 	tst_BatteryParameters BatteryParam;
