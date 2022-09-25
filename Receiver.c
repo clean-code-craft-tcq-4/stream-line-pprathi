@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "Receiver.h"
 
 void readSensorData(int min,int max,int *readsensorvalue,int *readsensorvalue1)
 {
