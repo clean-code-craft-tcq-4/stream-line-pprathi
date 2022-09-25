@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include "Receiver.h"
 void readData()
 {
    int i;
