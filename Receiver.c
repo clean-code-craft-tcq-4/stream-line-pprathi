@@ -20,8 +20,9 @@ int getMinValue(int *arrOfNumbers)
 {
     for(int i=0;i<len1;i++)
     {
+	        int min = arrOfNumbers[0];
 		if (arrOfNumbers[i] < min)
-			int min = arrOfNumbers[i];
+			min = arrOfNumbers[i];
     }
     return min;
 }
@@ -31,8 +32,9 @@ int getMaxValue(int *arrOfNumbers)
 {
     for (int i = 0; i<len1; i++) 
     {
+	        int max=arrOfNumbers[0];
 		if (arrOfNumbers[i] > max)
-			int max = arrOfNumbers[i];
+			max = arrOfNumbers[i];
 	}
     return max;
 }
