@@ -6,6 +6,7 @@
 
 int sampleValue[5] = {1,2,3,4,5};
 int sampleValue1[5] = {1,2,3,4,5};
+int retValMin,retValMax;
 
 void testfunctions(){
 	tst_BatteryParameters BatteryParam;
@@ -29,6 +30,10 @@ void testfunctions(){
 int main(void) {
 	//sendBatteryParameters();
 	//testfunctions();
+	 min=max=sampleValue[0];
+         retValMin = getMinValue(samplevalue);
+         retValMax= getMaxValue(samplevalue);
+         printf("min value=%d,max value=%d",retValMin,retValMax);
 	 readSensorData(0,5,sampleValue,sampleValue1);
          newAvgCalculate(sampleValue,sampleValue1);
 }
