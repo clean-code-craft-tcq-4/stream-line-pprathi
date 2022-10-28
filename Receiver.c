@@ -13,6 +13,33 @@ long sum = 0;
 int len = sizeof(arrNumbers) / sizeof(int);
 int count = sizeof(readsensorvalue) / sizeof(int);
 
+int arrOfNumbers[]={5,13,-12,3,25};
+int min,max;
+int retValMin,retValMax;
+int len = sizeof(arrOfNumbers) / sizeof(int);
+
+int getMinValue(int *arrOfNumbers)
+{
+    for(int i=0;i<len;i++)
+    {
+		if (arrOfNumbers[i] < min)
+			min = arrOfNumbers[i];
+    }
+    return min;
+}
+
+
+int getMaxValue(int *arrOfNumbers)
+{
+    for (int i = 0; i<len; i++) 
+    {
+		if (arrOfNumbers[i] > max)
+			max = arrOfNumbers[i];
+	}
+    return max;
+}
+
+
 void readSensorData(int min,int max,int *readsensorvalue,int *readsensorvalue1)
 {
     printf("**************Read Sensor Data**************\n");
