@@ -16,11 +16,11 @@ int count = sizeof(readsensorvalue) / sizeof(int);
 int arrOfNumbers[]={5,13,-12,3,25};
 int min,max;
 int retValMin,retValMax;
-int len = sizeof(arrOfNumbers) / sizeof(int);
+int len1 = sizeof(arrOfNumbers) / sizeof(int);
 
 int getMinValue(int *arrOfNumbers)
 {
-    for(int i=0;i<len;i++)
+    for(int i=0;i<len1;i++)
     {
 		if (arrOfNumbers[i] < min)
 			min = arrOfNumbers[i];
@@ -31,7 +31,7 @@ int getMinValue(int *arrOfNumbers)
 
 int getMaxValue(int *arrOfNumbers)
 {
-    for (int i = 0; i<len; i++) 
+    for (int i = 0; i<len1; i++) 
     {
 		if (arrOfNumbers[i] > max)
 			max = arrOfNumbers[i];
