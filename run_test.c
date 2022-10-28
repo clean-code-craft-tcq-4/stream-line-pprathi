@@ -4,7 +4,7 @@
 #include "Sender.h"
 #include "Receiver.h"
 
-int sampleValue[5] = {1,2,3,4,5};
+int sampleValue[5] = {-1,2,3,4,5};
 int sampleValue1[5] = {1,2,3,4,5};
 int retValMin,retValMax;
 
