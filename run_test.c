@@ -31,8 +31,8 @@ int main(void) {
 	//sendBatteryParameters();
 	//testfunctions();
 	 min=max=sampleValue[0];
-         retValMin = getMinValue(samplevalue);
-         retValMax= getMaxValue(samplevalue);
+         retValMin = getMinValue(sampleValue);
+         retValMax= getMaxValue(sampleValue);
          printf("min value=%d,max value=%d",retValMin,retValMax);
 	 readSensorData(0,5,sampleValue,sampleValue1);
          newAvgCalculate(sampleValue,sampleValue1);
