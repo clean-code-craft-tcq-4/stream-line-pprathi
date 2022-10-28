@@ -14,7 +14,7 @@ int len = sizeof(arrNumbers) / sizeof(int);
 int count = sizeof(readsensorvalue) / sizeof(int);
 
 int arrOfNumbers[]={5,13,-12,3,25};
-int min,max;
+
 
 int len1 = sizeof(arrOfNumbers) / sizeof(int);
 
