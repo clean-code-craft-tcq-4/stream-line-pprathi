@@ -43,14 +43,11 @@ int getMaxValue(int *arrOfNumbers)
 void readSensorData(int min,int max,int *readsensorvalue,int *readsensorvalue1)
 {
     printf("\n**************Read Sensor Data**************\n");
-    if((readsensorvalue!=NULL) && (readsensorvalue1!=NULL))
-    {
         for(int i = min;i<max;i++)
         {
        // scanf("%d,",&readsensorvalue[i]);
         printf("Read sensor data1:%d,Read sensor data2:%d\n",readsensorvalue[i],readsensorvalue1[i]);
         }
-    }
 }
 
 int simpleMovingAvg(int *arrNumbers, long *sum, int pos, int len, int nextNum)
