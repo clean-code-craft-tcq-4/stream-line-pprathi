@@ -4,3 +4,4 @@ int simpleMovingAvg(int *arrNumbers, long *sum, int pos, int len, int nextNum);
 void newAvgCalculate(int *readsensorvalue,int *readsensorvalue1);
 int getMinValue(int *arrOfNumbers);
 int getMaxValue(int *arrOfNumbers);
+extern int min,max;
