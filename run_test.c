@@ -26,12 +26,10 @@ void testfunctions(){
 	retStatus = sendBatteryParameters();
 	assert( retStatus == SUCCESS);
 }
-
-int main(void) {
+void unitTestReceiver()
+{
 	 int retValMin,retValMax;
-	 sendBatteryParameters();
-	 testfunctions();
-         retValMin = getMinValue(sampleValue);
+	 retValMin = getMinValue(sampleValue);
 	 assert(retValMin==1);
          retValMax= getMaxValue(sampleValue);
 	 assert(retValMax==50);
@@ -42,4 +40,10 @@ int main(void) {
          printf("min value=%d,max value=%d\n",retValMin,retValMax);
 	 assert(readSensorData(0,50,sampleValue,sampleValue1)==0);
          assert(newAvgCalculate(sampleValue,sampleValue1)==0);
+}
+int main(void) {
+	 
+	 sendBatteryParameters();
+	 testfunctions();
+         unitTestReceiver();
 }
