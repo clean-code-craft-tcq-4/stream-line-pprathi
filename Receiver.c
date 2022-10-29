@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include "Receiver.h"
 
-int arrNumbers[5] = {0};
+int arrNumbers[MAX_VALUE_SENSOR_READING] = {0};
 int pos = 0;
 int newAvg = 0;
 int newAvg1 = 0;                                               
 long sum = 0;
 int len = sizeof(arrNumbers) / sizeof(int);
 int count = sizeof(readsensorvalue) / sizeof(int);
-int arrOfNumbers[5];
+int arrOfNumbers[MAX_VALUE_SENSOR_READING];
 int len1 = sizeof(arrOfNumbers) / sizeof(int);
 
 int getMinValue(int *arrOfNumbers)
