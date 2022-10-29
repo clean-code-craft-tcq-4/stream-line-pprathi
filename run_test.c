@@ -27,8 +27,8 @@ void testfunctions(){
 }
 
 int main(void) {
-	//sendBatteryParameters();
-	//testfunctions();
+	 sendBatteryParameters();
+	 testfunctions();
          int retValMin = getMinValue(sampleValue);
          int retValMax= getMaxValue(sampleValue);
          printf("min value=%d,max value=%d",retValMin,retValMax);
