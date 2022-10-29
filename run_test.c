@@ -36,7 +36,9 @@ int main(void) {
          retValMax= getMaxValue(sampleValue);
 	 assert(retValMax==50);
 	 retValMin = getMinValue(sampleValue2);
+	 assert(retValMin==-50);
 	 retValMax= getMaxValue(sampleValue2);
+	 assert(retValMax==49);
          printf("min value=%d,max value=%d\n",retValMin,retValMax);
 	 assert(readSensorData(0,50,sampleValue,sampleValue1)==0);
          assert(newAvgCalculate(sampleValue,sampleValue1)==0);
