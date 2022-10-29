@@ -58,6 +58,7 @@ void newAvgCalculate(int *readsensorvalue,int *readsensorvalue1)
     {
     newAvg = simpleMovingAvg(arrNumbers, &sum, pos, len, readsensorvalue[i]);
     newAvg1 = simpleMovingAvg(arrNumbers, &sum, pos, len, readsensorvalue1[i]);
+    if(i>=MAX_VALUE_SENSOR_READING-5)	    
     printf("The new Average1 is %d,The new Average2 %d\n", newAvg,newAvg1);
     pos++;
     if (pos >= len)
