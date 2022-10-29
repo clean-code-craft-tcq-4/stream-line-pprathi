@@ -11,6 +11,7 @@ int count = sizeof(readsensorvalue) / sizeof(int);
 int arrOfNumbers[MAX_VALUE_SENSOR_READING];
 int len1 = sizeof(arrOfNumbers) / sizeof(int);
 
+/*********This Function generates Min Value*****************/
 int getMinValue(int *arrOfNumbers)
 {
     int min = arrOfNumbers[0];
@@ -22,7 +23,7 @@ int getMinValue(int *arrOfNumbers)
     return min;
 }
 
-
+/*********This Function generates Max Value*****************/
 int getMaxValue(int *arrOfNumbers)
 {
     int max=arrOfNumbers[0];	
@@ -34,7 +35,7 @@ int getMaxValue(int *arrOfNumbers)
     return max;
 }
 
-
+/*********This Function reading the sensors data*****************/
 int readSensorData(int min,int max,int *readsensorvalue,int *readsensorvalue1)
 {
     printf("\n**************Read Sensor Data**************\n");
@@ -45,21 +46,21 @@ int readSensorData(int min,int max,int *readsensorvalue,int *readsensorvalue1)
         }
 	return 0;
 }
-
+/*********This Function generates simple moving average*****************/
 int simpleMovingAvg(int *arrNumbers, long *sum, int pos, int len, int nextNum)
 {
   *sum = *sum - arrNumbers[pos] + nextNum;
    arrNumbers[pos] = nextNum;
   return *sum / len;
 }
-
+/*********This Function Displays the Last 5  Avg Values*****************/
 int newAvgCalculate(int *readsensorvalue,int *readsensorvalue1)
 {
     for(int i = 0; i < count; i++)
     {
     newAvg = simpleMovingAvg(arrNumbers, &sum, pos, len, readsensorvalue[i]);
     newAvg1 = simpleMovingAvg(arrNumbers, &sum, pos, len, readsensorvalue1[i]);
-    if(i>=MAX_VALUE_SENSOR_READING-5)	    
+    if(i>=MAX_VALUE_SENSOR_READING-5)	     // Calculate the Last Avg Value
     printf("The new Average1 is %d,The new Average2 %d\n", newAvg,newAvg1);
     pos++;
     if (pos >= len)
