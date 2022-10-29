@@ -8,7 +8,7 @@ int newAvg1 = 0;
 long sum = 0;
 int len = sizeof(arrNumbers) / sizeof(int);
 int count = sizeof(readsensorvalue) / sizeof(int);
-int arrOfNumbers[];
+int arrOfNumbers[5];
 int len1 = sizeof(arrOfNumbers) / sizeof(int);
 
 int getMinValue(int *arrOfNumbers)
