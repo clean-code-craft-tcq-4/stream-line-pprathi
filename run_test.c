@@ -42,7 +42,7 @@ void unitTestReceiver()
          printf("min value=%d,max value=%d\n",retValMin,retValMax);
 	 assert(readSensorData(0,50,sampleValue,sampleValue1)==0); //Test Read Sensor data
          assert(newAvgCalculate(sampleValue,sampleValue1)==0); // Test Last Avg of sensor data
-	 newAvgCalculate(sampleValue3,sampleValue4)
+	 newAvgCalculate(sampleValue3,sampleValue4);
 }
 int main(void) {
 	 
