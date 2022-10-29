@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "Receiver.h"
 
-int readsensorvalue[5];
 int readsensorvalue1[5];
 int arrNumbers[5] = {0};
 
