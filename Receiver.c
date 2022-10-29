@@ -40,7 +40,7 @@ void readSensorData(int min,int max,int *readsensorvalue,int *readsensorvalue1)
     printf("\n**************Read Sensor Data**************\n");
         for(int i = min;i<max;i++)
         {
-        scanf("%d,%d",&readsensorvalue[i],&readsensorvalue1[i);
+        scanf("%d,%d",&readsensorvalue[i],&readsensorvalue1[i]);
         printf("Read sensor data1:%d,Read sensor data2:%d\n",readsensorvalue[i],readsensorvalue1[i]);
         }
 }
