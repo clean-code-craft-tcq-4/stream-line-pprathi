@@ -30,7 +30,9 @@ int main(void) {
 	 sendBatteryParameters();
 	 testfunctions();
          int retValMin = getMinValue(sampleValue);
+	 assert(retValMin<0);
          int retValMax= getMaxValue(sampleValue);
+	 assert(retValMax>0);
          printf("min value=%d,max value=%d",retValMin,retValMax);
 	 assert(readSensorData(0,50,sampleValue,sampleValue1)==0);
          assert(newAvgCalculate(sampleValue,sampleValue1)==0);
