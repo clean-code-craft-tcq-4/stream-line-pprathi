@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include "Receiver.h"
 
-int arrNumbers[MAX_VALUE_SENSOR_READING] = {0};
+int arrNumbers[MAX_VALUE_SENSOR_READINGS] = {0};
 int pos = 0;
 int newAvg = 0;
 int newAvg1 = 0;                                               
 long sum = 0;
 int len = sizeof(arrNumbers) / sizeof(int);
 int count = sizeof(readsensorvalue) / sizeof(int);
-int arrOfNumbers[MAX_VALUE_SENSOR_READING];
+int arrOfNumbers[MAX_VALUE_SENSOR_READINGS];
 int len1 = sizeof(arrOfNumbers) / sizeof(int);
 
 /*********This Function generates Min Value*****************/
@@ -60,7 +60,7 @@ int newAvgCalculate(int *readsensorvalue,int *readsensorvalue1)
     {
     newAvg = simpleMovingAvg(arrNumbers, &sum, pos, len, readsensorvalue[i]);
     newAvg1 = simpleMovingAvg(arrNumbers, &sum, pos, len, readsensorvalue1[i]);
-    if(i>=MAX_VALUE_SENSOR_READING-5)	     // Calculate the Last Avg Value
+    if(i>=MAX_VALUE_SENSOR_READINGS-LAST_FIVE_SENSOR_READINGS)	     // Calculate the Last Avg Value
     printf("The new Average1 is %d,The new Average2 %d\n", newAvg,newAvg1);
     pos++;
     if (pos >= len)
