@@ -35,7 +35,7 @@ int getMaxValue(int *arrOfNumbers)
 }
 
 
-void readSensorData(int min,int max,int *readsensorvalue,int *readsensorvalue1)
+int readSensorData(int min,int max,int *readsensorvalue,int *readsensorvalue1)
 {
     printf("\n**************Read Sensor Data**************\n");
         for(int i = min;i<max;i++)
@@ -43,6 +43,7 @@ void readSensorData(int min,int max,int *readsensorvalue,int *readsensorvalue1)
         scanf("%d,%d",&readsensorvalue[i],&readsensorvalue1[i]);
         printf("Read sensor data1:%d,Read sensor data2:%d\n",readsensorvalue[i],readsensorvalue1[i]);
         }
+	return 0;
 }
 
 int simpleMovingAvg(int *arrNumbers, long *sum, int pos, int len, int nextNum)
@@ -52,7 +53,7 @@ int simpleMovingAvg(int *arrNumbers, long *sum, int pos, int len, int nextNum)
   return *sum / len;
 }
 
-void newAvgCalculate(int *readsensorvalue,int *readsensorvalue1)
+int newAvgCalculate(int *readsensorvalue,int *readsensorvalue1)
 {
     for(int i = 0; i < count; i++)
     {
@@ -66,4 +67,5 @@ void newAvgCalculate(int *readsensorvalue,int *readsensorvalue1)
             pos = 0;
         }
     }
+	return 0;
 }
