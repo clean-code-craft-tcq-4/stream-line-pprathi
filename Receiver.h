@@ -5,4 +5,5 @@ void newAvgCalculate(int *readsensorvalue,int *readsensorvalue1);
 extern int getMinValue(int *arrOfNumbers);
 extern int getMaxValue(int *arrOfNumbers);
 extern int readsensorvalue[5];
+extern int readsensorvalue1[5];;
 
